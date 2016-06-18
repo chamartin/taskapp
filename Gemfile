@@ -24,3 +24,15 @@ group :test do
   gem 'selenium-webdriver' # Firefox や Chrome など、テスト対象のブラウザをカンタンに設定できます
   gem 'simplecov', require: false # どのソースコードがテスト済みかを綺麗に表示してくれます
 end
+
+group :production do
+  gem 'unicorn'
+end
+
+group :development do
+  gem 'capistrano'
+  gem 'capistrano-rails',   require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano-rbenv',   require: false
+  gem 'capistrano3-unicorn'
+end
